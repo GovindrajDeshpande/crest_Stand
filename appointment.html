@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* Set the font family for the entire document */
+            background: linear-gradient(to right, #f0f0f0, #e0e0e0, #d0d0d0);
+            /* Set the background color of the entire document */
+            color: #333;
+            /* Set the text color of the entire document */
+            margin: 0;
+            /* Remove default margin */
+            padding: 0;
+            /* Remove default padding */
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 10px 10px gray;
+            width: 50%;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        select,
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .submit-button {
+            background-color: #4CAF50;
+            /* Button background color */
+            border: none;
+            color: white;
+            /* Button text color */
+            padding: 10px 20px;
+            /* Button padding */
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            /* Make the button a block-level element */
+            width: 100%;
+            /* Set the width to 100% */
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+
+        .h1 {
+            text-align: center;
+            background: linear-gradient(to right, #ff7e5f, #feb47b, #ffdf90);
+            /* Background gradient */
+            padding: 10px;
+            /* Add padding for better appearance */
+            transition: background-color 0.3s;
+            /* Smooth transition for hover effect */
+        }
+
+        .h1:hover {
+            background: linear-gradient(to right, #ffb6a3, #ffd3b1, #fff0b9);
+            /* Background gradient on hover */
+        }
+
+        .marquee {
+            font-size: 20px;
+            color: black;
+            /* Text color */
+            background: linear-gradient(45deg, #ff6347, #ff69b4, #87ceeb);
+            padding: 10px;
+            /* Padding around the text */
+        }
+
+        .full-button {
+            background-color: #3498db;
+            /* Button background color */
+            border: none;
+            color: white;
+            /* Button text color */
+            padding: 10px 20px;
+            /* Button padding */
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            /* Make the button a block-level element */
+            width: 100%;
+            /* Set the width to 100% */
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .full-button a {
+            color: inherit;
+            /* Inherit button text color for anchor tag */
+            text-decoration: none;
+        }
+
+        .full-button:hover {
+            background-color: #2980b9;
+            /* Button background color on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="h1">Book Appointment</h1>
+    <marquee class="marquee" behavior="scroll" direction="left"><b>BOOK YOUR APPOINTMENT HERE</b></marquee>
+    <div>
+        <form action="" method="post" class="container">
+            <label>Patient Name</label>
+            <input type="text" name="name" placeholder="Enter Patient Name"><br><br>
+            <label>Mobile Number</label>
+            <input type="text" name="mno" placeholder="Enter Mobile Number"><br><br>
+            <label>Doctor Name</label>
+            <select name="doctorname">
+                <option value="1">--select--</option>
+                <option value="Dr. Ram">Dr. Ram</option>
+                <option value="Dr. Hari">Dr. Hari</option>
+                <option value="Dr. Vasu">Dr. Vasu</option>
+            </select><br><br>
+            <label>Date</label>
+            <input type="date" name="date" placeholder="select Date"><br><br>
+            <input type="submit" value="Submit" class="submit-button"><br><br>
+            <button class="full-button"><a href="appointmentList.ejs">View Appointment Details</a></button>
+        </form>
+    </div>
+</body>
+
+</html>

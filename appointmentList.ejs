@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment List</title>
+    <style>
+        dl{
+            display: table;
+            border-collapse: collapse;
+            width: 800px;
+        }
+        dl div{
+            display: table-row;
+            
+        }
+        dt, dd{
+            display: table-cell;
+            border: 1px solid black;
+            vertical-align: top;
+            padding: 5px;
+        }
+        .header{
+            background-color: black;
+            color: white;
+        }
+        .show{
+            box-shadow: 7px 7px gray;
+            margin-left: 18%;
+        }
+        h1 {
+            text-align: center;
+            color: black; /* You can change the color as per your preference */
+            font-family: Arial, sans-serif; /* You can change the font-family as per your preference */
+            background-color: darkgray; /* Background color */
+            padding: 10px 0; /* Adding padding for better readability */
+            cursor: pointer; /* Changing cursor to pointer on hover */
+            transition: background-color 0.3s; /* Adding transition for smooth effect */
+        }
+        body{
+            background: linear-gradient(to right, #f0f0f0, #e0e0e0, #d0d0d0);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Appointment List</h1>
+    <dl class="show">
+        <div class="header">
+            <dt>S.No</dt>
+            <dd>Patient Name</dd>
+            <dd>Mobile Number</dd>
+            <dd>Doctor Name</dd>
+            <dd>Date</dd>
+        </div>
+        <% if(appointmentList.length > 0){ %>
+            <% for(var i = 0; i < appointmentList.length; i++){ %>
+                <div>
+                    <dt><%- appointmentList[i].id %></dt>
+                    <dd><%- appointmentList[i].name %></dd>
+                    <dd><%- appointmentList[i].mno %></dd>
+                    <dd><%- appointmentList[i].doctorname %></dd>
+                    <dd><%- appointmentList[i].date %></dd>
+                </div>
+            <% } %>
+        <% }else{ %>
+            <h1>Appointment Date not found</h1>
+        <% } %>
+
+    </dl>
+</body>
+</html>
